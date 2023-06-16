@@ -1,0 +1,163 @@
+#video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  outline: none;
+  font-family: 'Marck Script', cursive;
+}
+
+.topmenu {
+  backface-visibility: hidden;
+  background: rgba(250, 250, 250, 0);
+}
+
+.topmenu>li {
+  display: inline-block;
+  position: relative;
+}
+
+.topmenu>li>a {
+  font-family: 'Marck Script', cursive;
+  height: 70px;
+  line-height: 70px;
+  padding: 0 55px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  transition: .4s ease-in-out;
+}
+
+.down:after {
+  content: "\f107";
+  margin-left: 150px;
+  font-family: FontAwesome;
+}
+
+.topmenu li a:hover {
+  color: #ffd000;
+}
+
+.submenu {
+  background: rgba(0, 0, 0, 0.842);
+  border: 1px #ffffff;
+  position: absolute;
+  left: 0;
+  opacity: 90;
+  width: 300px;
+  max-height: 0;
+  /* Начальная высота 0 */
+  overflow: hidden;
+  /* Скрытие содержимого списка */
+  transition: max-height 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  /* Плавный переход */
+  font-size: 80px;
+}
+
+.topmenu>li:hover .submenu {
+  opacity: 1;
+  max-height: 750px;
+  /* Максимальная высота списка при раскрытии */
+}
+
+
+
+.submenu li a {
+  color: #ffffff;
+  font-size: 17px;
+  line-height: 36px;
+  padding: 0 25px;
+  font-family: Сomic Sans MS;
+  transition: .4s ease-in-out;
+}
+
+@import "https://fonts.googleapis.com/css?family=Russo+One";
+
+h2.funny-title {
+  border-top: 5px solid #9433cca4;
+  border-bottom: 5px solid #3a95eba4;
+  font-size: 70px;
+  text-align: center;
+  margin-top: 300px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-family: 'Russo One', sans-serif;
+  font-weight: 900;
+  letter-spacing: 8px
+}
+
+@-webkit-keyframes move-background {
+  0% {
+    background-position: -300px 0
+  }
+
+  100% {
+    background-position: 300px -300px
+  }
+}
+
+@-moz-keyframes move-background {
+  0% {
+    background-position: -300px 0
+  }
+
+  100% {
+    background-position: 300px -300px
+  }
+}
+
+@keyframes move-background {
+  0% {
+    background-position: -300px 0
+  }
+
+  100% {
+    background-position: 300px -300px
+  }
+
+}
+
+.section-title {
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  animation-play-state: running;
+  color: transparent;
+  background: url(Images/text\ fon.png) no-repeat #f5f4f4f8;
+  background-size: cover;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-animation: move-background 20s infinite linear alternate;
+  -moz-animation: move-background 20s infinite linear alternate;
+  animation: move-background 20s infinite linear alternate
+}
+
+p {
+  overflow: hidden;
+  position: fixed;
+  bottom: 10px;
+  color: rgba(255, 255, 255, 0.384);
+  font-size: 20px;
+
+}
